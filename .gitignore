@@ -1,0 +1,33 @@
+# Arquivos de byte compilados do Python
+__pycache__/
+*.py[cod]
+
+# Arquivos de ambiente
+.env
+
+# Diretório de instalação de dependências
+venv/
+
+# Arquivo de registro
+*.log
+
+# Arquivos gerados durante a execução
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+
+# Arquivo de banco de dados SQLite (se aplicável)
+*.sqlite3
+
+# Arquivo de saída gerado pelo sistema operacional
+.DS_Store
+
+# Arquivos de build
+/build/
+/dist/
+*.egg-info/
+*.egg
