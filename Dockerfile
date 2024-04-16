@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Exponha a porta em que o Flask está sendo executado
-EXPOSE 5000
+EXPOSE 3000
 
 # Comando para iniciar o aplicativo Flask quando o contêiner for iniciado
 CMD ["python", "app.py"]
