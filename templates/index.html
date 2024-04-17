@@ -4,43 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Acesso e Cadastro</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-        text-align: center;
-    }
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    input[type="submit"] {
-        background-color: #4caf50;
-        color: white;
-        cursor: pointer;
-    }
-    input[type="submit"]:hover {
-        background-color: #45a049;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
@@ -54,21 +18,9 @@
         <input type="password" id="senha" name="senha" required>
 
         <input type="submit" value="Entrar">
+
+        <a href="{{ url_for('register') }}">Clique aqui para registrar</a>
     </form>
 </div>
-
-<div class="container">
-    <h2>Cadastro de Usuário</h2>
-    <form action="{{ url_for('cadastro') }}" method="POST">
-        <label for="novousuario">Novo Usuário:</label>
-        <input type="text" id="novousuario" name="novousuario" required>
-
-        <label for="novasenha">Nova Senha:</label>
-        <input type="password" id="novasenha" name="novasenha" required>
-
-        <input type="submit" value="Cadastrar">
-    </form>
-</div>
-
 </body>
 </html>

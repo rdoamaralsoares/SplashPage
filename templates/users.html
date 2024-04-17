@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Usuários e Senhas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h2>Tabela de Usuários e Senhas</h2>
+
+<table id="tabela-usuarios">
+    <thead>
+        <tr>
+            <th>Usuário</th>
+            <th>Senha</th>
+        </tr>
+    </thead>
+    <tbody>
+    <!-- Os dados serão preenchidos aqui -->
+    {% for usuario, senha in users.items() %}
+        <tr>
+            <td>{{ usuario }}</td>
+            <td>{{ senha }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
