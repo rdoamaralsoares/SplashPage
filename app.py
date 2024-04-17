@@ -32,7 +32,7 @@ def cadastro():
     nova_senha = request.form['novasenha']
     if novo_usuario not in usuarios:
         usuarios[novo_usuario] = nova_senha
-        return render_template('success.html', message = 'Usuário' + novo_usuario + 'cadastrado com sucesso!')
+        return render_template('success.html', message = 'Usuário ' + novo_usuario + ' cadastrado com sucesso!')
     else:
         return render_template('fail.html', message = 'Usuário já existe. Por favor, escolha outro nome de usuário.')
 
